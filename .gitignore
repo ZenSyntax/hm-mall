@@ -14,3 +14,4 @@
 /hm-service/src/main/resources/application-local.yaml
 /item-service/src/main/resources/application-dev.yaml
 /item-service/src/main/resources/application-local.yaml
+/.idea/sqldialects.xml
