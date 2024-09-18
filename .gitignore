@@ -1,0 +1,16 @@
+/cart-service/src/main/resources/application-local.yaml
+/cart-service/src/main/resources/application-dev.yaml
+/cart-service/target/
+/cart-service/src/test/
+/item-service/target/
+/item-service/src/test/
+/logs/
+/note/
+/hm-service/target/
+/hm-service/src/test/
+/hm-common/target/
+/hm-common/src/test/
+/hm-service/src/main/resources/application-dev.yaml
+/hm-service/src/main/resources/application-local.yaml
+/item-service/src/main/resources/application-dev.yaml
+/item-service/src/main/resources/application-local.yaml
