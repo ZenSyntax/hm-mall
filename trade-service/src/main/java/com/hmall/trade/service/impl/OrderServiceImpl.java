@@ -4,10 +4,8 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.hmall.api.client.CartClient;
 import com.hmall.api.client.ItemClient;
 import com.hmall.api.domain.dto.ItemDTO;
-import com.hmall.common.exception.BadRequestException;
-import com.hmall.common.utils.UserContext;
-
 import com.hmall.api.domain.dto.OrderDetailDTO;
+import com.hmall.common.exception.BadRequestException;
 import com.hmall.trade.domain.dto.OrderFormDTO;
 import com.hmall.trade.domain.po.Order;
 import com.hmall.trade.domain.po.OrderDetail;
@@ -67,7 +65,7 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, Order> implements
         order.setTotalFee(total);
         // 1.5.其它属性
         order.setPaymentType(orderFormDTO.getPaymentType());
-        order.setUserId(UserContext.getUser());
+        order.setUserId(1L/* TODO UserContext.getUser()*/);
         order.setStatus(1);
         // 1.6.将Order写入数据库order表中
         save(order);

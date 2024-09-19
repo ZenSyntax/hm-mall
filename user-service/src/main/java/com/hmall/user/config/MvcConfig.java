@@ -1,7 +1,6 @@
 package com.hmall.user.config;
 
 import cn.hutool.core.collection.CollUtil;
-
 import com.hmall.user.interceptor.LoginInterceptor;
 import com.hmall.user.utils.JwtTool;
 import lombok.RequiredArgsConstructor;
