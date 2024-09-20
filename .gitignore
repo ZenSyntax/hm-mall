@@ -39,3 +39,5 @@
 /item-service/src/test/
 /item-service/src/main/resources/application-dev.yaml
 /item-service/src/main/resources/application-local.yaml
+
+/hm-gateway/target/
