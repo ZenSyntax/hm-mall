@@ -16,7 +16,7 @@ hm:
       - /items/**
       - /hi
   db:
-    database: hm-cart
+    database: hm-user
     swagger:
       title: "黑马商城用户服务接口文档"
       package: com.hmall.user.controller
