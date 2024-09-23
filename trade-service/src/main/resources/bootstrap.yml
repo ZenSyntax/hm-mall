@@ -12,3 +12,5 @@ spring:
           - data-id: shared-jdbc.yaml
           - data-id: shared-log.yaml
           - data-id: shared-swagger.yaml
+          - data-id: shared-sentinel.yaml
+          - data-id: shared-feign.yaml

@@ -20,7 +20,7 @@ public class DefaultFeignConfig {
             public void apply(RequestTemplate template) {
                 Long userId = UserContext.getUser();
                 if (userId != null) {
-                    template.header("user-id", String.valueOf(userId));
+                    template.header("user-info", String.valueOf(userId));
                 }
             }
         };

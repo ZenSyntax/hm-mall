@@ -12,3 +12,12 @@ hm:
       - /users/login
       - /items/**
       - /hi
+      - /error
+      - /favicon.ico
+      - /v2/**
+      - /v3/**
+      - /swagger-resources/**
+      - /webjars/**
+      - doc.html
+  sentinel:
+    server-addr: localhost

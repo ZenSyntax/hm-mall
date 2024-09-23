@@ -1,8 +1,5 @@
 server:
   port: 8082
-feign:
-  okhttp:
-    enabled: true # 开启OKHttp功能
 hm:
   db:
     database: hm-pay

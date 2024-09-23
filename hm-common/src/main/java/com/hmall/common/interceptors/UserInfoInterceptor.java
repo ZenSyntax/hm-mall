@@ -2,11 +2,13 @@ package com.hmall.common.interceptors;
 
 import cn.hutool.core.util.StrUtil;
 import com.hmall.common.utils.UserContext;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.servlet.HandlerInterceptor;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+@Slf4j
 public class UserInfoInterceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
@@ -17,6 +19,7 @@ public class UserInfoInterceptor implements HandlerInterceptor {
         //2.判断是否获取了用户，如果有，则存入ThreadLocal
         if (!StrUtil.isBlank(userInfo)) {
             UserContext.setUser(Long.valueOf(userInfo));
+            log.info("userId in interceptor: {}", UserContext.getUser());
         }
         //3.放行
         return true;

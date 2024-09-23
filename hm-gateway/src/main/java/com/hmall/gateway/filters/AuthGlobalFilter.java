@@ -59,7 +59,6 @@ public class AuthGlobalFilter implements GlobalFilter, Ordered {
         ServerWebExchange swe = exchange.mutate()
                 .request(builder -> builder.header(("user-info"), userInfo))
                 .build();
-
         //6.放行
         return chain.filter(swe);
     }

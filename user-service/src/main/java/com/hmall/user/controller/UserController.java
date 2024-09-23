@@ -1,6 +1,7 @@
 package com.hmall.user.controller;
 
 
+import com.hmall.common.utils.UserContext;
 import com.hmall.user.domain.dto.LoginFormDTO;
 import com.hmall.user.domain.vo.UserLoginVO;
 import com.hmall.user.service.IUserService;
@@ -9,6 +10,8 @@ import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
 import lombok.RequiredArgsConstructor;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
@@ -18,6 +21,7 @@ import org.springframework.web.bind.annotation.*;
 @RequiredArgsConstructor
 public class UserController {
 
+    private static final Logger log = LoggerFactory.getLogger(UserController.class);
     private final IUserService userService;
 
     @ApiOperation("用户登录接口")
@@ -33,6 +37,7 @@ public class UserController {
     })
     @PutMapping("/money/deduct")
     public void deductMoney(@RequestParam("pw") String pw,@RequestParam("amount") Integer amount){
+        log.info("userId in controller: {}", UserContext.getUser());
         userService.deductMoney(pw, amount);
     }
 }
