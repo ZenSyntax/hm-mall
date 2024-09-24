@@ -19,5 +19,3 @@ hm:
       - /swagger-resources/**
       - /webjars/**
       - doc.html
-  sentinel:
-    server-addr: localhost
