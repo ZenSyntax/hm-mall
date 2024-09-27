@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PutMapping;
 
 @FeignClient("trade-service")
-public interface OrderClient {
+public interface TradeClient {
     @PutMapping("/orders/{orderId}")
     void updateOrderStatus(@PathVariable("orderId") Long orderId);
 }

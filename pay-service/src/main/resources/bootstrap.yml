@@ -15,3 +15,4 @@ spring:
           - data-id: shared-sentinel.yaml
           - data-id: shared-feign.yaml
           - data-id: shared-seata.yaml
+          - data-id: shared-amqp.yaml
