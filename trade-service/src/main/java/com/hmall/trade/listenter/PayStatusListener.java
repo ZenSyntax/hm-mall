@@ -1,5 +1,6 @@
 package com.hmall.trade.listenter;
 
+import com.hmall.trade.domain.po.Order;
 import com.hmall.trade.service.IOrderService;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
@@ -23,6 +24,13 @@ public class PayStatusListener {
             key = "pay.success"
     ))
     public void listenPaySuccess(Long orderId){
+        //1.查询订单状态
+        Order order = orderService.getById(orderId);
+        //2.判断订单状态，是否为未支付
+        if (order == null || order.getStatus() != 1) {
+            //不做处理
+            return;
+        }
         log.info("接收支付状态通知成功，订单id：{}", orderId);
         orderService.markOrderPaySuccess(orderId);
     }
